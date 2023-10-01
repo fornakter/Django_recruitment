@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block head %}
+<div class="max-w-sm rounded overflow-hidden shadow-lg" align="center">
+    {% for img in images %}
+  <img class="w-full" src="{{ img.image.url }}" alt="{{ img.name }}" width="200px">
+  <div class="px-6 py-4">
+
+    <div class="font-bold text-xl mb-2">{{ img.name }}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

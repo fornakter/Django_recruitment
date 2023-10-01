@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head %}
+<div class="max-w-sm rounded overflow-hidden shadow-lg" align="center">
+    {% for img in images %}
+  <a href="{{ img.image.url }}" target="_blank">
+  <img class="w-full" src="{{ img.image.url }}" alt="{{ img.name }}" height="200">
+  <div class="px-6 py-4">
+
+    <div class="font-bold text-xl mb-2">{{ img.name }}</div>
+  </div><br>
+      Click on a image to open originally size<br>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

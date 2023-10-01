@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<div align="center"><br>
+    Explore images:<br>
+    <a href="{% url 'img_list' %}">Basic</a>
+    <a href="{% url 'list_premium' %}">Premium</a>
+    <a href="{% url 'list_ent' %}">Enterprise</a><br><br>
+    Upload Your image:<br><br>
+    <form method="POST", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+{% endblock %}

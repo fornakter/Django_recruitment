@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  django:
+    command: python manage.py runserver 0.0.0.0:8000
+    container_name: Upload_pic
+    build: .
+#    image: django-server
+#    stdin_open: true
+#    tty: true
+    volumes:
+      - .:/code/
+    ports:
+      - "8000:8000"
